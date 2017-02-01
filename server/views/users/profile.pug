@@ -1,0 +1,15 @@
+extends ../shared/layout
+block main-content
+  h1 Welcome to your profile!
+  
+  p Username: #{currentUser.username}
+  p First Name: #{currentUser.firstName}
+  p Last Name: #{currentUser.lastName}
+  h2 Other users
+  if data
+    each user in data
+      p #{user._id} #{user.username}
+  h3 My articles
+  if art
+    each a in art
+      p #{a._id} #{a.description}

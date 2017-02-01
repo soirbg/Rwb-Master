@@ -1,0 +1,26 @@
+extends ../shared/layout
+block main-content
+  h1 Edit event
+  form(method="post" action=("/listEvents/" + data._id) enctype="multipart/form-data").col-lg-12.col-md-12.col-sm-12.col-xs-12
+    div.form-group
+      label(for="time") Time
+      input(type="text" name="time" id="time" value=data.time).form-control
+    div.form-group
+      label(for="eventName") Event Name 
+      input(type="text" name="eventName" id="eventName" value=data.eventName).form-control
+    div.form-group
+      label(for="speaker") Speaker
+      input(type="text" name="speaker" id="speaker" value=data.speaker).form-control
+    div.form-group
+      label(for="overview") Overview
+      textarea(name="overview" id="overview").form-control #{data.overview}
+    div.form-group
+      label(for="aboutCompany") About Company
+      textarea(name="aboutCompany" id="aboutCompany").form-control #{data.aboutCompany}
+    div.form-group
+      label(for="hall") Hall
+      input(type="text" name="hall" id="hall" value=data.hall).form-control
+    div.form-group
+      input(type="file" name="picture" id="picture" value=data.picture)
+    div.form-group
+      input(type="submit" value="Save").btn.btn-primary

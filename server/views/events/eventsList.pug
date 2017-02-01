@@ -1,0 +1,29 @@
+extends ../shared/layout
+block main-content
+  a(href="/eventCreate").btn.btn-primary Add Agenda
+  h1 Agenda
+  
+  table.table.table-striped
+        tbody
+          thead
+            th Time
+            th Topic
+            th Speaker
+            th Overview
+            th About Comp
+            th Hall
+            th Picture
+        if data
+          each event in data
+            tr
+              td #{event.time}
+              td #{event.eventName}
+              td #{event.speaker}
+              td #{event.overview}
+              td #{event.aboutCompany}
+              td #{event.hall}
+              td #{event.picture}
+              td 
+                a(href="/listEvents/edit/" + event.id).btn.btn-warning Edit
+              td 
+                a(href="/listEvents/delete/" + event.id).btn.btn-danger Delete

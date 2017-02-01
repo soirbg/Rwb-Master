@@ -1,0 +1,25 @@
+extends ../shared/layout
+block main-content
+  h1 Create new event
+  form(method="post" action="/sendEvent" enctype="multipart/form-data").col-lg-12.col-md-12.col-sm-12.col-xs-12
+    div.form-group
+      label(for="time") Time
+      input(type="text" name="time" id="time" value=time).form-control.col-lg-12.col-md-12.col-sm-12.col-xs-12
+    div.form-group
+      label(for="eventName") Event Name 
+      input(type="text" name="eventName" id="eventName" value=eventName).form-control
+    div.form-group
+      label(for="speaker") Speaker
+      input(type="text" name="speaker" id="speaker" value=speaker).form-control
+    div.form-group
+      label(for="overview") Overview
+      textarea(name="overview" id="overview" value=overview).form-control
+    div.form-group
+      label(for="aboutCompany") About Company
+      textarea(name="aboutCompany" id="aboutCompany" value=aboutCompany).form-control
+    div.form-group
+      label(for="hall") Hall
+      input(type="text" name="hall" id="hall" value=hall).form-control
+    div.form-group
+      input(type="file" name="picture" id="picture" value=picture)
+    input(type="submit" value="Create").btn.btn-primary

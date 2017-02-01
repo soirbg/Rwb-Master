@@ -1,0 +1,9 @@
+extends ../shared/layout
+block main-content
+  h1 Create new article
+  form(method="post" action="/articles/create")
+    label(for="description") Description
+    br
+    input(type="text" name="description" id="description" value=description)
+    br
+    input(type="submit" value="Create")

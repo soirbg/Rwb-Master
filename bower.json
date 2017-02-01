@@ -1,0 +1,22 @@
+{
+  "name": "exp-arch",
+  "description": "server",
+  "main": "index.js",
+  "authors": [
+    "soir <stoyan.g.dobrev@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
+}
