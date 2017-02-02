@@ -20,7 +20,6 @@ let articleSchema = new mongoose.Schema({
 	//});
   //})
 
-
 let Article = mongoose.model('Article', articleSchema)
 
 function seedArticle(){
