@@ -11,6 +11,6 @@ module.exports = {
   production: {
     rootPath: rootPath,
     db: 'mongodb://admin:pentapass9106!@ds141209.mlab.com:41209/rwbagenda',
-    port: process.env.port
+    port: process.env.PORT
   }
 }

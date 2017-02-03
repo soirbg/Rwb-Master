@@ -10,5 +10,5 @@ require('./server/config/express')(config, app)
 require('./server/config/routes')(app)
 require('./server/config/passport')()
 
-app.listen(process.env.PORT || 1337)
+app.listen(config.port)
 console.log('Express ready!')
