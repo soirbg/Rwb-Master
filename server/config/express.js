@@ -11,11 +11,11 @@ module.exports = (config, app) => {
   app.use(cookieParser())
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }))
-  app.use(session({
-    secret: 'neshto-taino!@#$%',
-    resave: true,
-    saveUninitialized: true
-  }))
+  //app.use(session({
+   // secret: 'neshto-taino!@#$%',
+   // resave: true,
+   // saveUninitialized: true
+  //}))
   app.use(passport.initialize())
   app.use(passport.session())
   app.use(function (req, res, next) {
