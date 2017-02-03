@@ -10,7 +10,7 @@ module.exports = {
   },
   production: {
     rootPath: rootPath,
-    db: process.env.MONGO_DB_CONN_STRING,
+    db: 'mongodb://admin:pentapass9106!@ds141209.mlab.com:41209/rwbagenda',
     port: process.env.port
   }
 }
