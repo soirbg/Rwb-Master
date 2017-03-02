@@ -39,7 +39,7 @@ module.exports = {
 		res.redirect('listEvents')
 	},
 	listEvent: (req, res, next) => {
-		Event.find().exec((err, data) =>{
+		Event.find({},{}, { sort: { 'time' : 1 } }).exec((err, data) =>{
 			if(err){
 				return next(err)
 			}
