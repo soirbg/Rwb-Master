@@ -96,7 +96,7 @@ module.exports = {
 		})
 	},
 	eventListMobile: (req, res, next) => {
-		Event.find({})
+		Event.find({},{}, { sort: { 'time' : 1 } })
 			 .exec(function(err, data){
 				if(err){
 					return next(err)
